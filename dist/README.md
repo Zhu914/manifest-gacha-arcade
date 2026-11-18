@@ -1,5 +1,9 @@
 # 霓虹游戏厅 · 祝福显化扭蛋机
 
+**当前已发布地址：<https://zhu914.github.io/manifest-gacha-arcade/>**
+
+源码仓库：<https://github.com/Zhu914/manifest-gacha-arcade>
+
 一个纯静态、无框架的创意互动网页。玩家走进一间温暖复古的霓虹游戏厅，看见一台主舞台扭蛋机：投入心愿币、转动旋钮后，玻璃仓中的彩色胶囊滚动并点亮，一颗胶囊从出口滚落到托盘，自动打开并弹出一张祝福卡片。
 
 > 这里的“显化”是创意互动与情绪价值的表达，不构成对现实结果的承诺。
@@ -45,11 +49,15 @@ python3 -m http.server 4173
 
 `dist/` 是最终静态产物，可直接部署到任意静态托管平台、CDN 或对象存储静态站点。常见方式：
 
-### GitHub Pages
+### GitHub Pages（当前采用）
+
+当前站点已通过 GitHub Pages 发布，部署分支为 `main`，部署路径为仓库根目录。页面最终从 `https://zhu914.github.io/manifest-gacha-arcade/` 访问。
+
+如需在新仓库中重复部署：
 
 1. 在仓库设置中启用 Pages。
-2. 选择部署分支，并将站点根目录指向 `manifest-gacha-arcade/dist`。
-3. 访问 GitHub Pages 生成的公网地址。
+2. 选择 `main` 分支，部署路径选择 `/ (root)`；本项目已将 `dist/` 同步提交到仓库根目录，因此这里不需要构建。
+3. 等待 GitHub Pages 构建完成后访问生成的公网地址。
 
 ### Vercel / Netlify / Cloudflare Pages
 
