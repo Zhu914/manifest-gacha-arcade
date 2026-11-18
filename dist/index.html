@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>霓虹游戏厅 · 显化扭蛋机</title>
+<meta name="description" content="走进复古游戏厅，投入一枚心愿币，转动旋钮，抽一枚温暖的显化祝福。">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="stage" id="stage">
+  <section class="arcade" aria-label="霓虹游戏厅场景">
+    <div class="ambient-layer" aria-hidden="true">
+      <div class="sunbeam"></div>
+      <div class="dust"></div>
+      <div class="light-dot"></div>
+      <div class="light-dot d2"></div>
+      <div class="light-dot d3"></div>
+      <div class="light-dot d4"></div>
+      <div class="light-dot d5"></div>
+    </div>
+
+    <header class="marquee-row" aria-hidden="true">
+      <div class="arcade-sign top-left">
+        <span>星愿</span><small>ARCADE</small>
+      </div>
+      <div class="neon-title">
+        <strong>显化扭蛋厅</strong>
+        <span>愿望轻轻落地的地方</span>
+      </div>
+      <div class="lightbox right-sign">
+        <span>满杯快乐</span>
+        <small>今日营业</small>
+      </div>
+    </header>
+
+    <div class="hall-depth" aria-hidden="true">
+      <div class="bg-machine claw left">
+        <div class="screen"></div><div class="prize"></div><div class="claw-arm"></div>
+        <span>夹娃娃机</span>
+      </div>
+      <div class="bg-machine arcade-box mid-left">
+        <div class="screen"></div><div class="joy"></div><div class="btns"><i></i><i></i></div>
+        <span>双人街机</span>
+      </div>
+      <div class="bg-machine prize-counter mid-right">
+        <div class="shelf"></div><div class="goods"></div><div class="sign">兑换</div>
+        <span>奖品兑换机</span>
+      </div>
+      <div class="bg-machine retro right">
+        <div class="screen"></div><div class="cabinet"></div><div class="speaker"></div>
+        <span>复古街机</span>
+      </div>
+      <div class="wall-glow"></div>
+    </div>
+
+    <section class="machine-area" aria-label="显化扭蛋机">
+      <div class="machine-shadow"></div>
+
+      <article class="gacha-machine" id="gacha">
+        <div class="machine-head">
+          <h1><span class="star">✦</span> 显化扭蛋机</h1>
+          <p>把一个小小愿望交给今天</p>
+        </div>
+
+        <div class="dome-shell">
+          <div class="glass-dome">
+            <div class="dome-shine"></div>
+            <div class="capsule-field" id="capsuleField"></div>
+          </div>
+          <div class="machine-screen" id="screen">
+            <p id="screenText">欢迎进来 · 请投入一枚心愿币</p>
+          </div>
+        </div>
+
+        <div class="machine-body">
+          <div class="coin-panel">
+            <div class="coin-station">
+              <button class="coin" id="coinButton" type="button" aria-label="投入心愿币">
+                <span>心愿币</span>
+                <small>点击投币</small>
+              </button>
+              <div class="coin-line" aria-hidden="true"></div>
+              <div class="slot"><span>投币口</span></div>
+            </div>
+
+            <button class="knob" id="knobButton" type="button" aria-label="转动旋钮抽出祝福" disabled>
+              <span class="knob-center">转</span>
+            </button>
+          </div>
+
+          <div class="delivery-track">
+            <div class="exit-mouth" aria-hidden="true"><span>出口</span></div>
+            <div class="delivery-path" id="deliveryPath"></div>
+            <div class="tray">
+              <div class="tray-inner"></div>
+              <span>接住好运</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="wish-card-stage" id="cardStage" aria-hidden="true">
+          <article class="wish-card">
+            <div class="card-top">
+              <span class="card-tag">今日祝福</span>
+              <h2 id="wishName">等待抽中</h2>
+            </div>
+            <p id="wishMeaning"></p>
+            <div class="action-row">
+              <strong>今天的小行动</strong>
+              <span id="wishAction"></span>
+            </div>
+            <blockquote id="wishQuote"></blockquote>
+            <div class="card-buttons">
+              <button id="copyButton" type="button">复制祝福</button>
+              <button id="againButton" type="button">再抽一次</button>
+            </div>
+            <p class="card-note">这是创意祝福与情绪鼓励，不构成现实承诺。</p>
+          </article>
+        </div>
+      </article>
+
+      <div class="side-token" aria-hidden="true"></div>
+    </section>
+  </section>
+
+  <p class="screen-reader-status visually-hidden" role="status" aria-live="polite" id="statusText"></p>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
